@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Kommunikationsstöd AI</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<div class="top">
+  <div class="app-title">Kommunikationsstöd AI <span id="version">v1.2</span></div>
+  <div class="ai-title">AI-förslag</div>
+  <div id="aiBar"></div>
+</div>
+
+<div class="sentence" id="sentence">...</div>
+<div class="selected" id="selected">Valda symboler visas här</div>
+
+<div class="nav">
+  <button onclick="setPage('start')">Startsida</button>
+  <button onclick="setPage('fraser')">Fraser</button>
+  <button onclick="setPage('vardag')">Vardag</button>
+</div>
+
+<div class="page-title" id="pageTitle">STARTSIDA</div>
+<div class="grid" id="grid"></div>
+
+<div class="controls">
+  <button onclick="speak()">Tala</button>
+  <button onclick="undo()">Ångra</button>
+  <button onclick="clearAll()">Rensa</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
