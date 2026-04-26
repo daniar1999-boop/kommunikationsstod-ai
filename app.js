@@ -78,8 +78,13 @@ function renderGrid() {
     div.innerHTML = `
       <div class="cell-word">${item.text}</div>
       <div class="cell-symbol">
-        <img src="bliss/${imgName}.png" onerror="this.style.display='none'; this.parentElement.innerText='BLISS';">
+        <img src="bliss/${imgName}.png" 
+          onerror="
+            this.style.display='none';
+            this.parentElement.innerHTML='<div class=&quot;missing-symbol&quot;>lägg in<br>${imgName}.png</div>';
+          ">
       </div>
+      <div class="cell-type">${item.type || ""}</div>
     `;
 
     div.onclick = () => {
